@@ -287,8 +287,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: -0.18442284, y: 0.15321545, z: -0.029118517, w: -0.97039443}
-  m_LocalPosition: {x: 5.9651237, y: 7.6348763, z: -18.419186}
+  m_LocalRotation: {x: -0.20708664, y: 0.16838422, z: -0.03620828, w: -0.96304256}
+  m_LocalPosition: {x: 5.6177325, y: 6.081232, z: -14.685287}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -398,6 +398,7 @@ GameObject:
   - component: {fileID: 1839122991}
   - component: {fileID: 1839122990}
   - component: {fileID: 1839122989}
+  - component: {fileID: 1839122993}
   m_Layer: 0
   m_Name: Paddle
   m_TagString: Untagged
@@ -478,3 +479,16 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1839122993
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1839122988}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8408d23faaaa4c44bbb7cee92daa680, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 10

@@ -9,6 +9,8 @@ https://dotinstall.com/lessons/basic_unity_v2
 - materialの作り方と反映方法
 - カメラの操作
 - scriptの作成と反映
+- デバッグの方法
+- publicに変数を設定するとinspectorで値を変更できる
 
 # scriptメモ
 - paddleを動かす処理
@@ -47,3 +49,11 @@ Time.deltaTime
 ```
 Debug.Log(transform.position.x);
 ```
+
+# エラー
+```
+The associated script can not be loaded. Please fix any compile errors and assign a valid script.(スクリプトがロード出来ませんでした。コンパイルエラーを修正し、有効なスクリプトを割り当てて下さい）と表示されます。
+```
+原因：クラス名とスクリプト名が一致していないと読み込まないらしい  
+参考：http://tsubakit1.hateblo.jp/entry/2016/10/06/232628  
+

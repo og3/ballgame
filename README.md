@@ -11,7 +11,7 @@ https://dotinstall.com/lessons/basic_unity_v2
 - scriptの作成と反映
 - デバッグの方法
 - publicに変数を設定するとinspectorで値を変更できる
-
+- プレハブの作り方
 # scriptメモ
 - paddleを動かす処理
 ```
@@ -50,6 +50,17 @@ Time.deltaTime
 Debug.Log(transform.position.x);
 ```
 
+- インスタンスの生成
+```
+Instantiate(プレハブ名, 座標位置, 回転);
+```
+
+- リピート処理
+```
+InvokeRepea(リピートするメソッド）;
+```
+
+
 # エラー
 ```
 The associated script can not be loaded. Please fix any compile errors and assign a valid script.(スクリプトがロード出来ませんでした。コンパイルエラーを修正し、有効なスクリプトを割り当てて下さい）と表示されます。
@@ -57,3 +68,8 @@ The associated script can not be loaded. Please fix any compile errors and assig
 原因：クラス名とスクリプト名が一致していないと読み込まないらしい  
 参考：http://tsubakit1.hateblo.jp/entry/2016/10/06/232628  
 
+# 機能メモ
+- プレハブ
+指定したgameobjectを好きなタイミングで好きな数生成することができる  
+画面にたくさん出てくる同じオブジェクトはこれで作らないとできない  
+#16にて解説

@@ -15,6 +15,11 @@ https://dotinstall.com/lessons/basic_unity_v2
 - プレハブの生成
 
 # scriptメモ
+- 形の変更や指定や取得
+```
+transform
+```
+
 - paddleを動かす処理
 ```
 transform.position += new Vector3(Input.GetAxis("Horizontal"), 0f, 0f) * Time.deltaTime
@@ -28,7 +33,7 @@ transform.position
 
 - ３方向のベクトルを変更する際のオブジェクト
 ```
-new Vector3
+new Vector3(x, y, z);
 ```
 引数は３つ  
 
@@ -85,6 +90,16 @@ OnCollisionEnter(Collision collision)
 ```
 gameObjectでPaddleのタグをもっているものと衝突したら、このオブジェクトを削除する
 
+- ゲーム内の時間を止める
+```
+Time.timeScale = 0;
+```
+
+- 別のシーンを読み込む時の宣言
+```
+using UnityEngine.SceneManagement;
+```
+
 # エラー
 ```
 The associated script can not be loaded. Please fix any compile errors and assign a valid script.(スクリプトがロード出来ませんでした。コンパイルエラーを修正し、有効なスクリプトを割り当てて下さい）と表示されます。
@@ -100,3 +115,15 @@ The associated script can not be loaded. Please fix any compile errors and assig
 
 - rigidbody
 inspectorから重力や衝突の判定を受けるかどうかなどの物理挙動を設定する
+
+- canvas scale with screen size
+スクリーンの比でテキストサイズを変更してくれる機能
+
+- 領域外のテキストを表示
+horizontal overflowをoverflowに設定する
+
+- sceneの登録
+build settingsにて行う
+
+- gameの書き出し
+file > build and run より

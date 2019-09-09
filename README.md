@@ -12,6 +12,8 @@ https://dotinstall.com/lessons/basic_unity_v2
 - デバッグの方法
 - publicに変数を設定するとinspectorで値を変更できる
 - プレハブの作り方
+- プレハブの生成
+
 # scriptメモ
 - paddleを動かす処理
 ```
@@ -57,9 +59,31 @@ Instantiate(プレハブ名, 座標位置, 回転);
 
 - リピート処理
 ```
-InvokeRepea(リピートするメソッド）;
+InvokeRepea(リピートするメソッド, 何秒後から, 何秒間隔で）;
 ```
 
+- 座標に関して
+```
+transform.position.y
+```
+インスペクターで設定されている値を取得する
+
+- 衝突判定をするメソッド
+```
+OnCollisionEnter(Collision collision)
+```
+引数に衝突したオブジェクトが入る
+例：オブジェクトに衝突したら、消す処理
+```
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Paddle"))
+        {
+            Destroy(gameObject);
+        }
+    }
+```
+gameObjectでPaddleのタグをもっているものと衝突したら、このオブジェクトを削除する
 
 # エラー
 ```
@@ -73,3 +97,6 @@ The associated script can not be loaded. Please fix any compile errors and assig
 指定したgameobjectを好きなタイミングで好きな数生成することができる  
 画面にたくさん出てくる同じオブジェクトはこれで作らないとできない  
 #16にて解説
+
+- rigidbody
+inspectorから重力や衝突の判定を受けるかどうかなどの物理挙動を設定する

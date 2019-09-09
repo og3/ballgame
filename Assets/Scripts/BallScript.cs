@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BallScript : MonoBehaviour
 {
@@ -15,6 +16,12 @@ public class BallScript : MonoBehaviour
     void Update()
     {
         transform.position += new Vector3(0f, 0f, -1 * speed * Time.deltaTime);
+        if(transform.position.z < -13.0f)
+        {
+            //Debug.Log("game over");
+            //Time.timeScale = 0;
+            SceneManager.LoadScene("GameOverScene");
+        }
     }
 
     private void OnCollisionEnter(Collision collision)

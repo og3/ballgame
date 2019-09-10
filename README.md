@@ -77,7 +77,7 @@ transform.position.y
 ```
 OnCollisionEnter(Collision collision)
 ```
-引数に衝突したオブジェクトが入る
+引数に衝突したオブジェクトが入る  
 例：オブジェクトに衝突したら、消す処理
 ```
     private void OnCollisionEnter(Collision collision)
@@ -104,7 +104,7 @@ using UnityEngine.SceneManagement;
 ```
 The associated script can not be loaded. Please fix any compile errors and assign a valid script.(スクリプトがロード出来ませんでした。コンパイルエラーを修正し、有効なスクリプトを割り当てて下さい）と表示されます。
 ```
-原因：クラス名とスクリプト名が一致していないと読み込まないらしい  
+原因：クラス名とスクリプト名が一致していないと読み込まないらしい    
 参考：http://tsubakit1.hateblo.jp/entry/2016/10/06/232628  
 
 # 機能メモ
